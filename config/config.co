@@ -1,0 +1,36 @@
+define user express greeting
+  "hello"
+  "hi"
+
+define bot express greeting
+  "Hello there!"
+  "Hi!"
+
+define bot ask welfare
+  "How are you feeling today?"
+
+define flow hello
+  user express greeting
+  bot express greeting
+  bot ask welfare
+
+define user ask capabilities
+  "What can you do?"
+  "What can you help me with?"
+  "tell me what you can do"
+  "tell me about you"
+
+define bot inform capabilities
+  "I am an AI assistant which helps answer questions based on a given knowledge base. For this interaction, I can answer question based on the job report published by US Bureau of Labor Statistics."
+
+define flow
+  user ask capabilities
+  bot inform capabilities
+
+define user ask about household survey data
+  "How many long term unemployment individuals were reported?"
+  "What's the number of part-time employed people?"
+
+define flow
+  user ask about household survey data
+  bot response about household survey data
